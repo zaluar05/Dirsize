@@ -6,15 +6,15 @@
 
 double tamanho = 0;
 
-static int soma_byts(const char *fpath, const struct stat *info, int typeflag,
-                     struct FTW *ftwbuff) {
+static inline int soma_byts(const char *fpath, const struct stat *info,
+                            int typeflag, struct FTW *ftwbuff) {
   if (typeflag == FTW_F) {
     tamanho += (double)info->st_size;
   }
   return 0;
 }
 
-void menu(char *argv[]) {
+static inline void menu(char *argv[]) {
   fprintf(stderr, "Chamada de programa feita de maneira errada.\n");
   fprintf(stderr, "Use da seguinte maneira:\n");
   fprintf(stderr, "%s <nome_do_diretorio>\n", argv[0]);
