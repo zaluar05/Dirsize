@@ -2,7 +2,7 @@ TARGET = dirsize
 
 # Compilador e flags
 CC = gcc
-CFLAGS = -Wall -g 
+CFLAGS = -Wall -g -O3
 
 # Regra principal
 all: $(TARGET)

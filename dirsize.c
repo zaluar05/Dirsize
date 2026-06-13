@@ -6,8 +6,8 @@
 
 double tamanho = 0;
 
-static inline int soma_byts(const char *fpath, const struct stat *info,
-                            int typeflag, struct FTW *ftwbuff) {
+static int soma_byts(const char *fpath, const struct stat *info, int typeflag,
+                     struct FTW *ftwbuff) {
   if (typeflag == FTW_F) {
     tamanho += (double)info->st_size;
   }
